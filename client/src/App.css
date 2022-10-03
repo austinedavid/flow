@@ -1,0 +1,11 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.active :nth-child(1){
+  color: blue;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  
+}
