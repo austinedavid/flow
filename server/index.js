@@ -8,7 +8,7 @@ const userRoute = require('./routes/user')
 const pixRoute = require('./routes/picture')
 const videoRoute = require('./routes/video')
 const adventureRoute = require('./routes/adventure')
-const path = require('path')
+
 dotenv.config()
 
 // grabbing hold of our express
@@ -24,7 +24,7 @@ const dbConnection = async()=>{
 }
 
 // creating a port for our api
-const port = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000
 
 // creating our middlewares here
 var corsOptions = {
@@ -61,7 +61,7 @@ app.use((err, req, res, next)=>{
 })
 
 // api host listening
-app.listen(port, ()=>{
+app.listen(PORT, ()=>{
     dbConnection()
-    console.log(`app is running on port: ${port}`)
+    console.log(`app is running on port: ${PORT}`)
 })
